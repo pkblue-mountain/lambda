@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8080/tasks
+# @baseUrl = http://18.61.100.155:8080/tasks
+
+
+###
+GET {{baseUrl}}
+
+###
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "title": "pk",
+    "description": "pk",
+    "status": "TODO"
+}
+
+###
+PUT {{baseUrl}}/2
+Content-Type: application/json
+
+{
+    "title": "pk update",
+    "description": "pk updage",
+    "status": "IN PROGRESS"
+}
+
+###
+PATCH {{baseUrl}}/2
+Content-Type: application/json
+
+{
+    "status": "COMPLETED"
+}
+
+###
+DELETE {{baseUrl}}/1
