@@ -30,11 +30,11 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws s3 cp target/*.jar s3://your-bucket-name/myapp.jar
+          aws s3 cp target/*.jar s3://pk-task-service/myapp.jar
 
       - name: Update Lambda Code
         run: |
           aws lambda update-function-code \
-            --function-name your-lambda-function-name \
-            --s3-bucket your-bucket-name \
+            --function-name task-service \
+            --s3-bucket pk-task-service \
             --s3-key myapp.jar
